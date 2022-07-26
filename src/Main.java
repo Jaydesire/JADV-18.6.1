@@ -11,6 +11,7 @@ public class Main {
         Function<String, String[]> stringToDictionaryArray = (string) -> {
             return Arrays.stream(string.split(" "))
                     .sorted()
+                    .distinct()
                     .toArray(String[]::new);
         };
 
